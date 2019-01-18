@@ -1,0 +1,14 @@
+os:
+    - linux
+language: node_js
+install:
+    - npm ci
+branches:
+    only:
+        - develop
+cache:
+    directories:
+        - node_modules
+        - '$HOME/.npm'
+script:
+    - npm run test
