@@ -16,6 +16,10 @@
     "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve",
     "nutri-score.build": "cd packages/nutri-score && stencil build --build",
     "nutri-score.test.spec": "cd packages/nutri-score && stencil test --spec",
-    "nutri-score.test.e2e": "cd packages/nutri-score && npx stencil test --e2e"
+    "nutri-score.test.e2e": "cd packages/nutri-score && npx stencil test --e2e",
+    "nova.dev": "cd packages/nova && stencil build --dev --watch --serve",
+    "nova.build": "cd packages/nova && stencil build --build",
+    "nova.test.spec": "cd packages/nova && stencil test --spec",
+    "nova.test.e2e": "cd packages/nova && npx stencil test --e2e"
   }
 }
