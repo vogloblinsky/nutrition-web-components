@@ -1,0 +1,22 @@
+{
+    "name": "@nutrition-web-components/nutri-score",
+    "version": "0.0.1",
+    "description": "Nutri-score Web Component",
+    "module": "dist/esm/index.js",
+    "main": "dist/index.js",
+    "unpkg": "dist/ionic.js",
+    "types": "dist/types/components.d.ts",
+    "collection": "dist/collection/collection-manifest.json",
+    "files": [
+        "dist/"
+    ],
+    "author": "Vincent Ogloblinsky",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vogloblinsky/nutrition-web-components.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vogloblinsky/nutrition-web-components/issues"
+    }
+}

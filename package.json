@@ -3,6 +3,19 @@
   "description": "Nutrition Web Components - NOVA and Nutri-score badges",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.10.5"
+    "@stencil/core": "0.16.2",
+    "@stencil/sass": "0.1.1",
+    "@types/jest": "23.3.12",
+    "@types/puppeteer": "1.11.1",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
+    "lerna": "3.10.5",
+    "puppeteer": "1.8.0"
+  },
+  "scripts": {
+    "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve",
+    "nutri-score.build": "cd packages/nutri-score && stencil build --build",
+    "nutri-score.test.spec": "cd packages/nutri-score && stencil test --spec",
+    "nutri-score.test.e2e": "cd packages/nutri-score && npx stencil test --e2e"
   }
 }
