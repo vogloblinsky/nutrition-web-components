@@ -1,0 +1,8 @@
+{
+  "name": "nutrition-web-components",
+  "description": "Nutrition Web Components - NOVA and Nutri-score badges",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.10.5"
+  }
+}
