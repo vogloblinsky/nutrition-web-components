@@ -13,4 +13,5 @@ cache:
         - node_modules
         - '$HOME/.npm'
 script:
+    - echo '0. Global test'
     - npm run test
