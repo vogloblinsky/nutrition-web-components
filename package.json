@@ -1,26 +1,26 @@
 {
-  "name": "nutrition-web-components",
-  "description": "Nutrition Web Components - NOVA and Nutri-score badges",
-  "private": true,
-  "devDependencies": {
-    "@stencil/core": "0.16.2",
-    "@stencil/sass": "0.1.1",
-    "@types/jest": "23.3.12",
-    "@types/puppeteer": "1.11.1",
-    "jest": "23.6.0",
-    "jest-cli": "23.6.0",
-    "lerna": "3.10.5",
-    "puppeteer": "1.8.0"
-  },
-  "scripts": {
-    "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve",
-    "nutri-score.build": "cd packages/nutri-score && stencil build --build",
-    "nutri-score.test.spec": "cd packages/nutri-score && stencil test --spec",
-    "nutri-score.test.e2e": "cd packages/nutri-score && stencil test --e2e",
-    "nova.dev": "cd packages/nova && stencil build --dev --watch --serve",
-    "nova.build": "cd packages/nova && stencil build --build",
-    "nova.test.spec": "cd packages/nova && stencil test --spec",
-    "nova.test.e2e": "cd packages/nova && stencil test --e2e",
-    "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e"
-  }
+    "name": "nutrition-web-components",
+    "description": "Nutrition Web Components - NOVA and Nutri-score badges",
+    "private": true,
+    "devDependencies": {
+        "@stencil/core": "0.17.0",
+        "@stencil/sass": "0.1.1",
+        "@types/jest": "23.3.13",
+        "@types/puppeteer": "1.11.1",
+        "jest": "23.6.0",
+        "jest-cli": "23.6.0",
+        "lerna": "3.10.6",
+        "puppeteer": "1.11.0"
+    },
+    "scripts": {
+        "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve",
+        "nutri-score.build": "cd packages/nutri-score && stencil build --build",
+        "nutri-score.test.spec": "cd packages/nutri-score && stencil test --spec",
+        "nutri-score.test.e2e": "cd packages/nutri-score && stencil test --e2e",
+        "nova.dev": "cd packages/nova && stencil build --dev --watch --serve",
+        "nova.build": "cd packages/nova && stencil build --build",
+        "nova.test.spec": "cd packages/nova && stencil test --spec",
+        "nova.test.e2e": "cd packages/nova && stencil test --e2e",
+        "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e"
+    }
 }
