@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, Watch } from '@stencil/core';
 
 @Component({
     tag: 'nova-badge',
@@ -9,9 +9,55 @@ export class Nova {
     /**
      * The score
      */
-    @Prop() score: string;
+    @Prop({ mutable: true }) score: string;
+
+    @Watch('score')
+    validateScore() {
+        if (
+            this.score === '1' ||
+            this.score === '2' ||
+            this.score === '3' ||
+            this.score === '4'
+        ) {
+            this.getScoreCSSClass();
+        } else {
+            this.score = '1';
+        }
+    }
+
+    /**
+     * Transform score to CSS class
+     */
+    private getScoreCSSClass(): string {
+        let scoreClass = '';
+        switch (this.score) {
+            case '1':
+                scoreClass = 'one';
+                break;
+            case '2':
+                scoreClass = 'two';
+                break;
+            case '3':
+                scoreClass = 'three';
+                break;
+            case '4':
+                scoreClass = 'four';
+                break;
+            default:
+                scoreClass = 'one';
+                break;
+        }
+        return scoreClass;
+    }
 
     render() {
-        return <div>{this.score}</div>;
+        return (
+            <div class="container">
+                <div class="title">NOVA</div>
+                <div class={'score ' + this.getScoreCSSClass()}>
+                    {this.score}
+                </div>
+            </div>
+        );
     }
 }
