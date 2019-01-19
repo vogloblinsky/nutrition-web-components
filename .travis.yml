@@ -1,6 +1,8 @@
 os:
     - linux
 language: node_js
+before_install:
+    - stty cols 80
 install:
     - npm ci
 node_js:
@@ -15,3 +17,5 @@ cache:
 script:
     - echo '0. Global test'
     - npm run test
+    - echo '1. Saucelabs test'
+    - npm run testcafe
