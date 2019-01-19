@@ -7,12 +7,16 @@
         "@stencil/sass": "0.1.1",
         "@types/jest": "23.3.13",
         "@types/puppeteer": "1.11.1",
+        "@wdio/cli": "^5.3.5",
+        "@wdio/local-runner": "^5.3.5",
+        "@wdio/mocha-framework": "^5.3.2",
+        "@wdio/sauce-service": "^5.3.2",
+        "@wdio/sync": "^5.3.2",
         "jest": "23.6.0",
         "jest-cli": "23.6.0",
         "lerna": "3.10.6",
         "puppeteer": "1.11.0",
-        "testcafe": "^0.23.3",
-        "testcafe-browser-provider-saucelabs": "^1.6.1"
+        "webdriverio": "^5.3.5"
     },
     "scripts": {
         "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve",
@@ -24,6 +28,6 @@
         "nova.test.spec": "cd packages/nova && stencil test --spec",
         "nova.test.e2e": "cd packages/nova && stencil test --e2e",
         "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e",
-        "testcafe": "./node_modules/.bin/testcafe \"saucelabs:Chrome@48.0:Linux\" tests/testcafe.js"
+        "testsaucelabs": "./node_modules/.bin/wdio wdio.conf.js"
     }
 }

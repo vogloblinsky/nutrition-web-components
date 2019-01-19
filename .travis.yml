@@ -5,8 +5,7 @@ before_install:
     - stty cols 80
 install:
     - npm ci
-node_js:
-    - '10'
+node_js: 'stable'
 branches:
     only:
         - develop
@@ -18,4 +17,4 @@ script:
     - echo '0. Global test'
     - npm run test
     - echo '1. Saucelabs test'
-    - npm run testcafe
+    - npm run testsaucelabs
