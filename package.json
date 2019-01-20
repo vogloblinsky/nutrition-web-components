@@ -31,7 +31,7 @@
         "nova.test.spec": "cd packages/nova && stencil test --spec",
         "nova.test.e2e.stencil": "cd packages/nova && stencil test --e2e",
         "nova.test.e2e.local": "run-p --race nova.test.e2e.serve nova.test.e2e.wdio:local",
-        "nova.test.e2e.remote": "rnpm run nova.test.e2e.serve & npm run nova.test.e2e.wdio:browserstack",
+        "nova.test.e2e.remote": "npm run nova.test.e2e.serve & npm run nova.test.e2e.wdio:browserstack",
         "nova.test.e2e.wdio:browserstack": " ./node_modules/.bin/wdio wdio.conf.js",
         "nova.test.e2e.wdio:local": " ./node_modules/.bin/wdio wdio.conf.local.js",
         "nova.test.e2e.serve": "http-server packages/nova/ -s",
