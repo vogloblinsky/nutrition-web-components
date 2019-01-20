@@ -15,6 +15,7 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
+    services: ['browserstack'],
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
     //
@@ -66,7 +67,10 @@ exports.config = {
             // 5 instances get started at a time.
             maxInstances: 5,
             //
-            browserName: 'firefox'
+            browserName: 'firefox',
+            'browserstack.local': true,
+            'browserstack.localIdentifier':
+                process.env.BROWSERSTACK_LOCAL_IDENTIFIER
         }
     ],
     //
