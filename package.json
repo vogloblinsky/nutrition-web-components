@@ -24,6 +24,7 @@
         "nova.test.spec": "cd packages/nova && stencil test --spec",
         "nova.test.e2e": "cd packages/nova && stencil test --e2e",
         "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e",
-        "testsaucelabs": "./node_modules/.bin/testcafe \"browserstack:chrome@71.0:Windows 10\" tests/test.js"
+        "testcafe:local": "./node_modules/.bin/testcafe chrome tests/test.js",
+        "testcafe:browserstack": "./node_modules/.bin/testcafe \"browserstack:chrome@71.0:Windows 10\" tests/test.js"
     }
 }

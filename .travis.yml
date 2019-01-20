@@ -17,5 +17,5 @@ cache:
 script:
     - echo '0. Global test'
     - npm run test
-    - echo '1. Saucelabs test'
-    - npm run testsaucelabs
+    - echo '1. Browserstack test'
+    - npm run testcafe:browserstack
