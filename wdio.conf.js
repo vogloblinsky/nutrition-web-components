@@ -65,7 +65,7 @@ exports.config = {
             // maxInstances can get overwritten per capability. So if you have an in-house Selenium
             // grid with only 5 firefox instances available you can make sure that not more than
             // 5 instances get started at a time.
-            maxInstances: 5,
+            maxInstances: 2,
             //
             os: 'Windows',
             os_version: '10',
@@ -131,7 +131,7 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
-    }
+    },
     //
     // =====
     // Hooks
@@ -145,8 +145,20 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function(config, capabilities) {
+        console.log('Connecting local');
+        return new Promise(function(resolve, reject) {
+            exports.bs_local = new browserstack.Local();
+            exports.bs_local.start({ key: exports.config.key }, function(
+                error
+            ) {
+                if (error) return reject(error);
+                console.log('Connected. Now testing...');
+
+                resolve();
+            });
+        });
+    },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
@@ -242,8 +254,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: function(exitCode, config, capabilities, results) {
+        exports.bs_local.stop(function() {});
+    }
     /**
      * Gets executed when a refresh happens.
      * @param {String} oldSessionId session ID of the old session
