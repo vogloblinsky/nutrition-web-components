@@ -5,7 +5,8 @@ before_install:
     - stty cols 80
 install:
     - npm ci
-node_js: stable
+node_js:
+    - '10'
 branches:
     only:
         - develop
@@ -13,8 +14,6 @@ cache:
     directories:
         - node_modules
         - '$HOME/.npm'
-addons:
-    sauce_connect: true
 script:
     - echo '0. Global test'
     - npm run test

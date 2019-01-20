@@ -12,7 +12,7 @@
         "lerna": "3.10.6",
         "puppeteer": "1.11.0",
         "testcafe": "^0.23.3",
-        "testcafe-browser-provider-saucelabs": "^1.6.1"
+        "testcafe-browser-provider-browserstack": "^1.7.0"
     },
     "scripts": {
         "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve",
@@ -24,6 +24,6 @@
         "nova.test.spec": "cd packages/nova && stencil test --spec",
         "nova.test.e2e": "cd packages/nova && stencil test --e2e",
         "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e",
-        "testsaucelabs": "./node_modules/.bin/testcafe \"saucelabs:Chrome@48.0:Linux\" tests/test.js"
+        "testsaucelabs": "./node_modules/.bin/testcafe \"browserstack:chrome@71.0:Windows 10\" tests/test.js"
     }
 }
