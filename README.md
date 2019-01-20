@@ -45,3 +45,7 @@ https://fr.wikipedia.org/wiki/NOVA_(nutrition)
 https://fr.wikipedia.org/wiki/Nutri-score
 
 http://www.santepubliquefrance.fr/Media/Files/NUTRISCORE/annexe2_charte_graphique
+
+## Testing Supported By
+
+<img width="160" src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" alt="BrowserStack"/>
