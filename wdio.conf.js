@@ -67,7 +67,10 @@ exports.config = {
             // 5 instances get started at a time.
             maxInstances: 5,
             //
-            browserName: 'firefox',
+            os: 'Windows',
+            os_version: '10',
+            browser: 'Chrome',
+            browser_version: '62.0',
             'browserstack.local': true,
             'browserstack.localIdentifier':
                 process.env.BROWSERSTACK_LOCAL_IDENTIFIER
