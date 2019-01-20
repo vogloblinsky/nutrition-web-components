@@ -15,7 +15,10 @@ cache:
         - node_modules
         - '$HOME/.npm'
 addons:
-    sauce_connect: true
+    browserstack:
+        username: vincentogloblins1
+        access_key:
+            secure: nZ3tClsJH0BgJBoXvHXKLONGRnib53FiJ4aUpfOnBg3sRLsDaggiEX7M81P01RNXfF+ykWoDclhaGi3pCvABX/ufjWzaxyBctnNcLKqT4J0pHmhnTKbyZV2Kgycmht7O3kNAH7cshAioqK8zCEvOUDV80TSWnCsMCdQbJB4LHETw9fKH+q9oedtwieaSbFdOo9A6EkSW/OfDfGOG/QC2EFvaKX/L3chRH21vljnNVX5HL7nFBdN5WixRMjysoX3KqOFW3u1pcZVObw7Yb0XjmxunsiW50iACrS7mDzTTN2ec4jdGSV+GTGWYGeMofqdYOCS+CuLQMmDZTNBWjMbBk34ZifoX3q8U6Ex+nVPgmJ4qWSMJUyvRshavR4lpjheC6ClAe3+QA/b1L2dWScwOI4r2e+IQM4m0y+DNz2+P6wkx06HXH/Jp2XbctV5cJkTf87VzXW6/WOhGtan4ZViavDeaDFG5zAgoCa3TNsyoswyvoFZEggb5VWrBzWAOgSJQC5J0ztnUdUMXiCbW6EX0BLO74JQWG2+RC8gPjlwkNfB4nBdCl7FHmX2OUFNTGs1HQztvQEV3+nAQIFkGftYsdlobJ4/6rTUuxEcaVa6dUUX4gQKHJQeo1dTqgvOa0qV0apIX2S45OJTHBuBJv9x/cJ3QV3qlqm7gFL7SZx0qHEc=
 script:
     - echo '0. Global test'
     - npm run test
