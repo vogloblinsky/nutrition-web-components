@@ -17,6 +17,7 @@
         "jest": "23.6.0",
         "jest-cli": "23.6.0",
         "lerna": "3.10.6",
+        "npm-run-all": "^4.1.5",
         "puppeteer": "1.11.0",
         "webdriverio": "^5.3.5"
     },
@@ -28,9 +29,10 @@
         "nova.dev": "cd packages/nova && stencil build --dev --watch --serve",
         "nova.build": "cd packages/nova && stencil build --build",
         "nova.test.spec": "cd packages/nova && stencil test --spec",
-        "nova.test.e2e": "cd packages/nova && stencil test --e2e",
-        "nova.testcafe:local": "./node_modules/.bin/testcafe chrome packages/nova/tests/test.js --app \"http-server packages/nova/ -s\"",
-        "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e",
-        "testcafe:browserstack": "./node_modules/.bin/wdio wdio.conf.js"
+        "nova.test.e2e.local": "cd packages/nova && stencil test --e2e",
+        "nova.test.e2e.remote": "run-p --race nova.test.e2e.serve nova.test.e2e.wdio:browserstack",
+        "nova.test.e2e.wdio:browserstack": " ./node_modules/.bin/wdio wdio.conf.js",
+        "nova.test.e2e.serve": "http-server packages/nova/ -s",
+        "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e"
     }
 }

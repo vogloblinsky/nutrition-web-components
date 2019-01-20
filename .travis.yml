@@ -23,4 +23,4 @@ script:
     - echo '0. Global test'
     - npm run test
     - echo '1. Browserstack test'
-    - npm run testcafe:browserstack
+    - npm run nova.test.e2e.remote
