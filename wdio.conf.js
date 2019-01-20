@@ -64,20 +64,37 @@ exports.config = {
     //
     capabilities: [
         {
-            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-            // grid with only 5 firefox instances available you can make sure that not more than
-            // 5 instances get started at a time.
-            maxInstances: 2,
-            //
             os: 'Windows',
             os_version: '10',
             browser: 'Chrome',
-            browser_version: '62.0',
+            browser_version: '71.0',
             'browserstack.local': true,
             'browserstack.localIdentifier':
                 process.env.BROWSERSTACK_LOCAL_IDENTIFIER
+        },
+        {
+            os: 'Windows',
+            os_version: '10',
+            browser: 'Firefox',
+            browser_version: '64.0',
+            'browserstack.local': true
+        },
+        {
+            os: 'Windows',
+            os_version: '10',
+            browser: 'Edge',
+            browser_version: '18.0',
+            'browserstack.local': true
+        },
+        {
+            os: 'Windows',
+            os_version: '10',
+            browser: 'IE',
+            browser_version: '11.0',
+            'browserstack.local': true
         }
     ],
+    maxInstances: 2,
     //
     // ===================
     // Test Configurations
