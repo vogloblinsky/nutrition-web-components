@@ -15,17 +15,16 @@ describe('Nova badge page', () => {
         const CSSClass = novaBadge.getAttribute('class');
         assert.equal(CSSClass, 'hydrated');
     });
-    it('should have the nova badge score to 3', () => {
+    it('should have the nova badge score to 1', () => {
         let scoreElementValue = novaBadge.$(function() {
             return this.shadowRoot.querySelector('.score');
         });
-        assert.equal(scoreElementValue.getText(), 3);
+        assert.equal(scoreElementValue.getText(), 1);
     });
     it('should have the nova badge score to 2 after score attribute updated', () => {
         browser.execute(() => {
             document.querySelector('nova-badge').setAttribute('score', 2);
         });
-        browser.pause(3000);
         let scoreElementValue = novaBadge.$(function() {
             return this.shadowRoot.querySelector('.score');
         });
