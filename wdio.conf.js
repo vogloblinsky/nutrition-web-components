@@ -22,8 +22,7 @@ exports.config = {
     // in via the `region` property. Available short handles for regions are:
     // us: us-west-1 (default)
     // eu: eu-central-1
-    
-    
+
     //
     // ==================
     // Specify Test Files
@@ -33,9 +32,7 @@ exports.config = {
     // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
-    specs: [
-        './test/wdio.js'
-    ],
+    specs: ['./tests/wdio.js'],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -62,14 +59,16 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'firefox'
-    }],
+    capabilities: [
+        {
+            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+            // grid with only 5 firefox instances available you can make sure that not more than
+            // 5 instances get started at a time.
+            maxInstances: 5,
+            //
+            browserName: 'firefox'
+        }
+    ],
     //
     // ===================
     // Test Configurations
@@ -125,7 +124,7 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
-    },
+    }
     //
     // =====
     // Hooks
@@ -165,7 +164,7 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
-    
+
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -202,7 +201,7 @@ exports.config = {
      */
     // afterSuite: function (suite) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name
@@ -239,10 +238,10 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
-}
+};
