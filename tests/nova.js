@@ -25,6 +25,7 @@ describe('Nova badge page', () => {
         browser.execute(() => {
             document.querySelector('nova-badge').setAttribute('score', 2);
         });
+        browser.pause(3000);
         let scoreElementValue = novaBadge.$(function() {
             return this.shadowRoot.querySelector('.score');
         });
