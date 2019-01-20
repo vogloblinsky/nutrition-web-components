@@ -1,12 +1,14 @@
-const assert = require('assert');
+import { Selector } from 'testcafe'; // first import testcafe selectors
 
-describe('webdriver.io page', () => {
-    it('should have the right title', () => {
-        browser.url('https://webdriver.io');
-        const title = browser.getTitle();
-        assert.equal(
-            title,
-            'WebdriverIO · Next-gen WebDriver test framework for Node.js'
-        );
-    });
+fixture`Getting Started`.page`https://devexpress.github.io/testcafe/example`; // declare the fixture // specify the start page
+
+//then create a test and place your code there
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button')
+
+        // Use the assertion to check if the actual header text is equal to the expected one
+        .expect(Selector('#article-header').innerText)
+        .eql('Thank you, John Smith!');
 });
