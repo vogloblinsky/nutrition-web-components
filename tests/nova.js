@@ -4,7 +4,7 @@ describe('Nova badge page', () => {
     let novaBadge;
 
     before(function() {
-        browser.url('http://localhost:8080/tests');
+        browser.url('http://localhost:8080');
         novaBadge = $('nova-badge');
     });
     it('should have the right title', () => {

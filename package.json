@@ -34,7 +34,7 @@
         "nova.test.e2e.remote": "npm run nova.test.e2e.serve & npm run nova.test.e2e.wdio:browserstack",
         "nova.test.e2e.wdio:browserstack": " ./node_modules/.bin/wdio wdio.conf.js",
         "nova.test.e2e.wdio:local": " ./node_modules/.bin/wdio wdio.conf.local.js",
-        "nova.test.e2e.serve": "http-server packages/nova/ -s",
+        "nova.test.e2e.serve": "http-server packages/nova/www -s",
         "test": "npm run nutri-score.test.spec && npm run nova.test.spec && npm run nutri-score.test.e2e && npm run nova.test.e2e.stencil"
     }
 }
