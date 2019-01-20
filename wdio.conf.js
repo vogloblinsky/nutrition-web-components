@@ -80,6 +80,13 @@ exports.config = {
             'browserstack.local': true
         },
         {
+            os: 'OS X',
+            os_version: 'Mojave',
+            browser: 'Safari',
+            browser_version: '12.0',
+            'browserstack.local': true
+        } /*,
+        {
             os: 'Windows',
             os_version: '10',
             browser: 'Edge',
@@ -92,7 +99,7 @@ exports.config = {
             browser: 'IE',
             browser_version: '11.0',
             'browserstack.local': true
-        }
+        }*/
     ],
     maxInstances: 2,
     //
