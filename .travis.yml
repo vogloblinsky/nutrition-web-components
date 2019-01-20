@@ -14,10 +14,7 @@ cache:
         - node_modules
         - '$HOME/.npm'
 addons:
-    sauce_connect:
-        username: vogloblinsky
-    jwt:
-        secure: Tw2LSEXOlvj6ZSEOmGCNSSAPYzNxfterqyzmVdf6ar6aAQKMwo4bC+RV0dmND+Q4ATPwCgzRnOyfF7KokDQawON92BxXeaQ2wdFbBmmU2304Cw+uI2wxRZbf919X0kgX7yYq1Wnoak5lD8Fjci1THneqBbd8YN8kXIg8qyVOd2z69GLwmAHuSOJrbU5elbJrb/+NSvmSFcOlNk9jpfGQl4ean2Gvbn/DcjIRvZ/6oVE5cthejFSnn5l3BJaexhp9CtPCmwfORI2vsFVimwb7mhXm6wT7IZT0yV5JLancMY5ZSGUOUpQPMYaqfcJaHMLAwvBw9DsXl3JROUK8NfSrxdIz/HMIsPRxtSuWoJ8aT0M/9FXI+6TZfgGfxa+8w8H33c0F18HCQkx4dI+2/f/4dju+7Y+wPMig2JwzGEow7wXU/Q4tS4nmR+nNymTge+n+wVz21aGySqowej5FfKiRB5kIuwYFFIR0BmsRSjKUJjvhiyRhMoYOtYRXqh2Zv1FzZs6DV9ITcV05aSII0SM6TmsqXOd7JJG0b+SJGAVM0PCmj+IC2drfDhcz7v+4yFAbkqtgKaEHPkSu5T5AAAKYF1Qaai5OzICtrCI8pSGYTbam3iPwxUjjyYRwiTBmKuLV/jihF+w/tiacwb2xrI5KgoS2mEE6mgQoCkB5Zy1mydI=
+    sauce_connect: true
 script:
     - echo '0. Global test'
     - npm run test
