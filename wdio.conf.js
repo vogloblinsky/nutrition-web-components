@@ -1,3 +1,5 @@
+const browserstack = require('browserstack-local');
+
 exports.config = {
     //
     // ====================
