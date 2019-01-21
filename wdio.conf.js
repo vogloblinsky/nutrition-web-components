@@ -64,8 +64,7 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [
-        {
+    capabilities: [{
             os: 'Windows',
             os_version: '10',
             browser: 'Chrome',
@@ -88,21 +87,24 @@ exports.config = {
             browser_version: '12.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        } /*,
+        },
         {
             os: 'Windows',
             os_version: '10',
             browser: 'Edge',
             browser_version: '18.0',
-            'browserstack.local': true
-        },
-        {
-            os: 'Windows',
-            os_version: '10',
-            browser: 'IE',
-            browser_version: '11.0',
-            'browserstack.local': true
-        }*/
+            'browserstack.local': true,
+            project: PROJECT_NAME
+        }
+        /*,
+                {
+                    os: 'Windows',
+                    os_version: '10',
+                    browser: 'IE',
+                    browser_version: '11.0',
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                }*/
     ],
     maxInstances: 2,
     //
@@ -178,7 +180,9 @@ exports.config = {
         console.log('Connecting local');
         return new Promise(function(resolve, reject) {
             exports.bs_local = new browserstack.Local();
-            exports.bs_local.start({ key: exports.config.key }, function(
+            exports.bs_local.start({
+                key: exports.config.key
+            }, function(
                 error
             ) {
                 if (error) return reject(error);
