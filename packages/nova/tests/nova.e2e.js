@@ -1,5 +1,7 @@
 const assert = require('assert');
 
+const WAIT_TIME_EDGE = 5000;
+
 describe('Nova badge page', () => {
     let novaBadge,
         scoreElement,
@@ -40,7 +42,7 @@ describe('Nova badge page', () => {
         browser.execute(() => {
             document.querySelector('nova-badge').setAttribute('score', 2);
         });
-        browser.pause(1000);
+        browser.pause(WAIT_TIME_EDGE);
         assert.equal(scoreElement.getText(), 2);
     });
     it('should have the nova badge score correct CSS class', () => {
@@ -51,7 +53,7 @@ describe('Nova badge page', () => {
         browser.execute(() => {
             document.querySelector('nova-badge').setAttribute('score', 5);
         });
-        browser.pause(1000);
+        browser.pause(WAIT_TIME_EDGE);
         assert.equal(scoreElement.getText(), 1);
     });
 });
