@@ -40,7 +40,7 @@ describe('Nova badge page', () => {
 
     it('should have the nova badge score to 2 after score attribute updated', () => {
         browser.execute(() => {
-            document.querySelector('nova-badge').setAttribute('score', 2);
+            document.querySelector('nova-badge').setAttribute('score', '2');
         });
         browser.pause(WAIT_TIME_EDGE);
         assert.equal(scoreElement.getText(), 2);
@@ -51,7 +51,7 @@ describe('Nova badge page', () => {
 
     it('should have the nova badge score to 1 if updated score > 4', () => {
         browser.execute(() => {
-            document.querySelector('nova-badge').setAttribute('score', 5);
+            document.querySelector('nova-badge').setAttribute('score', '5');
         });
         browser.pause(WAIT_TIME_EDGE);
         assert.equal(scoreElement.getText(), 1);
