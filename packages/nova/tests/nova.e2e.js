@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const WAIT_TIME_EDGE = 5000;
+const WAIT_TIME_EDGE = 10000;
 
 describe('Nova badge page', () => {
     let novaBadge,
