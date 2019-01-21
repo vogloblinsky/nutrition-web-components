@@ -3,23 +3,15 @@ const assert = require('assert');
 describe('Nova badge page', () => {
     let novaBadge,
         scoreElement,
-        browserName = browser.capabilities.browserName,
-        browserVersion = browser.capabilities.version;
+        browserName = browser.capabilities.browserName;
 
     before(function() {
         browser.url('http://localhost:8080');
         novaBadge = $('nova-badge');
 
-        console.log('');
-        console.log('browserName: ', browserName);
-        console.log('browserVersion: ', browserVersion);
-        console.log('');
-
         if ((browserName === 'MicrosoftEdge')) {
             // If no shadow-DOM
-            scoreElement = novaBadge.$(function() {
-                return this.querySelector('.score');
-            });
+            scoreElement = $('nova-badge .score');
         } else {
             scoreElement = novaBadge.$(function() {
                 return this.shadowRoot.querySelector('.score');
@@ -34,30 +26,32 @@ describe('Nova badge page', () => {
 
     it('should have the nova badge element hydrated', () => {
         const CSSClass = novaBadge.getAttribute('class');
-        assert.equal(CSSClass, 'hydrated');
+        assert.notEqual(CSSClass.indexOf('hydrated'), -1);
     });
 
     it('should have the nova badge score to 1', () => {
         assert.equal(scoreElement.getText(), 1);
     });
     it('should have the nova badge score correct CSS class', () => {
-        assert.equal(scoreElement.getAttribute('class'), 'score one');
+        assert.notEqual(scoreElement.getAttribute('class').indexOf('one'), -1);
     });
 
     it('should have the nova badge score to 2 after score attribute updated', () => {
         browser.execute(() => {
             document.querySelector('nova-badge').setAttribute('score', 2);
         });
+        browser.pause(1000);
         assert.equal(scoreElement.getText(), 2);
     });
     it('should have the nova badge score correct CSS class', () => {
-        assert.equal(scoreElement.getAttribute('class'), 'score two');
+        assert.notEqual(scoreElement.getAttribute('class').indexOf('two'), -1);
     });
 
     it('should have the nova badge score to 1 if updated score > 4', () => {
         browser.execute(() => {
             document.querySelector('nova-badge').setAttribute('score', 5);
         });
+        browser.pause(1000);
         assert.equal(scoreElement.getText(), 1);
     });
 });
