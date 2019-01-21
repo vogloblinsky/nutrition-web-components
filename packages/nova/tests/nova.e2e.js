@@ -10,6 +10,11 @@ describe('Nova badge page', () => {
         browser.url('http://localhost:8080');
         novaBadge = $('nova-badge');
 
+        console.log('');
+        console.log('browserName: ', browserName);
+        console.log('browserVersion: ', browserVersion);
+        console.log('');
+
         if ((browserName === 'MicrosoftEdge')) {
             // If no shadow-DOM
             scoreElement = novaBadge.$(function() {
