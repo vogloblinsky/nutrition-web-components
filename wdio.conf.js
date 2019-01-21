@@ -1,5 +1,7 @@
 const browserstack = require('browserstack-local');
 
+const PROJECT_NAME = 'nutrition-web-components';
+
 exports.config = {
     //
     // ====================
@@ -69,22 +71,23 @@ exports.config = {
             browser: 'Chrome',
             browser_version: '71.0',
             'browserstack.local': true,
-            'browserstack.localIdentifier':
-                process.env.BROWSERSTACK_LOCAL_IDENTIFIER
+            project: PROJECT_NAME
         },
         {
             os: 'Windows',
             os_version: '10',
             browser: 'Firefox',
             browser_version: '64.0',
-            'browserstack.local': true
+            'browserstack.local': true,
+            project: PROJECT_NAME
         },
         {
             os: 'OS X',
             os_version: 'Mojave',
             browser: 'Safari',
             browser_version: '12.0',
-            'browserstack.local': true
+            'browserstack.local': true,
+            project: PROJECT_NAME
         } /*,
         {
             os: 'Windows',
