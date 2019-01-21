@@ -92,7 +92,7 @@ exports.config = {
             os: 'Windows',
             os_version: '10',
             browser: 'Edge',
-            browser_version: '18.0',
+            browser_version: '17.0',
             'browserstack.local': true,
             project: PROJECT_NAME
         },
