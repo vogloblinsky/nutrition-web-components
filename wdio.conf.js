@@ -94,6 +94,7 @@ exports.config = {
             browser: 'Edge',
             browser_version: '18.0',
             'browserstack.local': true,
+            'browserstack.debug': true,
             project: PROJECT_NAME
         }
         /*,
