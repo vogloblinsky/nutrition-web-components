@@ -10,7 +10,9 @@
   <a href="https://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT badge"/></a>
 </p>
 
-Nutrition Web Components helps developers displaying NOVA and Nutri-score badges.
+<p align="center">
+  Nutrition Web Components helps developers displaying NOVA and Nutri-score badges.
+</p>
 
 <p align="center">
   <img src="images/nova.png"/>
