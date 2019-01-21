@@ -2,18 +2,22 @@ const assert = require('assert');
 
 describe('Nova badge page', () => {
     let novaBadge,
-        scoreElement;
+        scoreElement,
+        browserName = browser.capabilities.browserName,
+        browserVersion = browser.capabilities.version;
 
     before(function() {
         browser.url('http://localhost:8080');
         novaBadge = $('nova-badge');
-        scoreElement = novaBadge.$(function() {
-            return this.shadowRoot.querySelector('.score');
-        });
-        if (!scoreElement) {
+
+        if ((browserName === 'edge' && browserVersion.indexOf('11') !== -1)) {
             // If no shadow-DOM
             scoreElement = novaBadge.$(function() {
                 return this.querySelector('.score');
+            });
+        } else {
+            scoreElement = novaBadge.$(function() {
+                return this.shadowRoot.querySelector('.score');
             });
         }
     });
