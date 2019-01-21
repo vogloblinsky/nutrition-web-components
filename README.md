@@ -12,7 +12,10 @@
 
 Nutrition Web Components helps developers displaying NOVA and Nutri-score badges.
 
-![Nova](images/nova.png)![Nutri-score](images/nutri-score.png)
+<p align="center">
+  <img src="images/nova.png"/>
+  <img src="images/nutri-score.png"/>
+</p>
 
 ## Demos
 

@@ -1,6 +1,8 @@
 # Nutri-score Web Component
 
-![Nutri-score](images/nutri-score.png)
+<p align="center">
+  <img src="images/nutri-score.png"/>
+</p>
 
 ## Installing the JavaScript Web Component
 

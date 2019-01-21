@@ -1,6 +1,8 @@
 # Nova Web Component
 
-![Nova](images/nova.png)
+<p align="center">
+  <img src="images/nova.png"/>
+</p>
 
 ## Installing the JavaScript Web Component
 
