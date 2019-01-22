@@ -11,7 +11,7 @@ describe('Nutri-score badge page', () => {
         browser.url('http://localhost:8080/nutri-score/www/');
         nutriScoreBadge = $('nutri-score');
 
-        if ((browserName === 'MicrosoftEdge')) {
+        if (browserName === 'MicrosoftEdge' || browserName === 'internet explorer') {
             // If no shadow-DOM
             scoreElement = $('nutri-score .score');
         } else {
