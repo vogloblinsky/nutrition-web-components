@@ -11,7 +11,6 @@ exports.config = {
     logLevel: 'info',
     deprecationWarnings: true,
     bail: 0,
-    baseUrl: 'http://localhost',
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,

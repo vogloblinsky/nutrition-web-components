@@ -8,7 +8,7 @@ describe('Nova badge page', () => {
         browserName = browser.capabilities.browserName;
 
     before(function() {
-        browser.url('http://localhost:8080');
+        browser.url('http://localhost:8080/nova/www/');
         novaBadge = $('nova-badge');
 
         if ((browserName === 'MicrosoftEdge')) {

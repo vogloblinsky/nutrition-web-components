@@ -7,7 +7,6 @@ exports.config = {
     services: ['browserstack'],
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
-    maxInstances: 10,
     capabilities: [{
             os: 'Windows',
             os_version: '10',
@@ -52,6 +51,10 @@ exports.config = {
     ],
     maxInstances: 2,
     logLevel: 'info',
+    specs: [
+        './packages/nova/tests/*.js',
+        './packages/nutri-score/tests/*.js'
+    ],
     deprecationWarnings: true,
     bail: 0,
     baseUrl: 'http://localhost',

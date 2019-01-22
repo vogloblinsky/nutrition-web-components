@@ -8,6 +8,7 @@ export const config: Config = {
         { type: 'dist' },
         {
             type: 'www',
+            baseUrl: '/nova/www',
             serviceWorker: null // disable service workers
         }
     ]

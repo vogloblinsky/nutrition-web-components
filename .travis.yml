@@ -24,7 +24,6 @@ script:
     - echo '0. Global test'
     - npm run test
     - echo '1. Browserstack tests'
-    - npm run nova.test.e2e.remote
-    - npm run nutri-score.test.e2e.remote
+    - npm run badges.test.e2e.remote
     - echo '2. Generate documentation'
     - npm run build-storybook

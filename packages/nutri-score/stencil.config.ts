@@ -14,6 +14,7 @@ export const config: Config = {
         { type: 'dist' },
         {
             type: 'www',
+            baseUrl: '/nutri-score/www',
             serviceWorker: null // disable service workers
         }
     ]
