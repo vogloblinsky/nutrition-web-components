@@ -45,10 +45,11 @@ exports.config = {
             browser: 'IE',
             browser_version: '11.0',
             'browserstack.local': true,
-            project: PROJECT_NAME
+            project: PROJECT_NAME,
+            'browserstack.ie.compatibility': '11001'
         }
     ],
-    maxInstances: 2,
+    maxInstances: 5,
     logLevel: 'info',
     specs: [
         './packages/nova/tests/*.js',
