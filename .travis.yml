@@ -28,7 +28,8 @@ script:
     - echo '2. Generate documentation'
     - npm run build-storybook
     - echo '3. Deploy documentation'
-    - npm run deploy-storybook -- --ci --source-branch=develop
+    - bash ./deploy.sh
 env:
     global:
-        secure: RWkvzXuFIk8u4jIfjLYMR+qe0ySvL0788MKb07wSYxya4MSNfAKf8KJs7JRIfAVFllfLZD0OjUgjAyBm7RpkXCKHoC6ePInQslZoHTKXgohINuOX1sVb5GTY9XnaAIzhRlLjz/1e9aoQ+MAIg890t8YnZzEg5dl9EgWQc78ufU627IG1o4L609T1CboRGgJAgss7khM3z+7SonaZCSDxvfmFC5Ri4ZhEs2GxhJUyo8+eFiZ+B5Uzt1yVX9WsaQ5ylg6mzTjm16164HxdMHgubDaHGv6VaYyJ2U31e5DDo21WPGVI+sp9jeXQUm/GthzxDGa/g175cib9Es6QcuQ7h/LJl4ku37vIuwJcTJ4Hk8u5nUZN+R/C59IOh/BNpWqdcACdbP5p+lTWmEEh/F4Dub1NUMA0/CXhQg9nUYhy8eaHu+GX+2LBSxZ9VNaMeQmLRygfVKgnZ1nC65JcJAW21J0fbvOBS3zRc90KyeG/ridNzpTYeAsDhphN59iN1NC1citu5wN7KqrgmS/E2lJsh/BHqg4+LU0VCqUO5xUEqUy7cq9FVfEMxkm8Oj+Ae08gDlemwYcAAvTmDZ4lroi0Ecm1FHet53+3YWkVvEtGLE8gHMsg8sncBKkIXVHrVKVSlTy6gh/PSl2vAixPVdgTes84ebYpeUveIy2lyYbWmI0=
+        - GH_REF: github.com/vogloblinsky/nutrition-web-components.git
+        - secure: RWkvzXuFIk8u4jIfjLYMR+qe0ySvL0788MKb07wSYxya4MSNfAKf8KJs7JRIfAVFllfLZD0OjUgjAyBm7RpkXCKHoC6ePInQslZoHTKXgohINuOX1sVb5GTY9XnaAIzhRlLjz/1e9aoQ+MAIg890t8YnZzEg5dl9EgWQc78ufU627IG1o4L609T1CboRGgJAgss7khM3z+7SonaZCSDxvfmFC5Ri4ZhEs2GxhJUyo8+eFiZ+B5Uzt1yVX9WsaQ5ylg6mzTjm16164HxdMHgubDaHGv6VaYyJ2U31e5DDo21WPGVI+sp9jeXQUm/GthzxDGa/g175cib9Es6QcuQ7h/LJl4ku37vIuwJcTJ4Hk8u5nUZN+R/C59IOh/BNpWqdcACdbP5p+lTWmEEh/F4Dub1NUMA0/CXhQg9nUYhy8eaHu+GX+2LBSxZ9VNaMeQmLRygfVKgnZ1nC65JcJAW21J0fbvOBS3zRc90KyeG/ridNzpTYeAsDhphN59iN1NC1citu5wN7KqrgmS/E2lJsh/BHqg4+LU0VCqUO5xUEqUy7cq9FVfEMxkm8Oj+Ae08gDlemwYcAAvTmDZ4lroi0Ecm1FHet53+3YWkVvEtGLE8gHMsg8sncBKkIXVHrVKVSlTy6gh/PSl2vAixPVdgTes84ebYpeUveIy2lyYbWmI0=
