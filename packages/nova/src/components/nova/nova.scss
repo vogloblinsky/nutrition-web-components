@@ -1,0 +1,39 @@
+:host {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .title {
+            color: #7e7e7e;
+            font-size: 24px;
+        }
+
+        .score {
+            color: white;
+            width: 68px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+
+            &.one {
+                background-color: #48ab00;
+            }
+            &.two {
+                background-color: #f5cd00;
+            }
+            &.three {
+                background-color: #ec6500;
+            }
+            &.four {
+                background-color: #e90000;
+            }
+        }
+    }
+}
