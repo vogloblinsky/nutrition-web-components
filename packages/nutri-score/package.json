@@ -4,7 +4,7 @@
     "description": "Nutri-score Web Component",
     "module": "dist/esm/index.js",
     "main": "dist/index.js",
-    "unpkg": "dist/ionic.js",
+    "unpkg": "dist/nutri-score.js",
     "types": "dist/types/components.d.ts",
     "collection": "dist/collection/collection-manifest.json",
     "files": [
