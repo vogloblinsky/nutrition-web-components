@@ -8,6 +8,7 @@
     "@stencil/sass": "0.1.1",
     "@storybook/addon-knobs": "^4.1.7",
     "@storybook/html": "^4.1.7",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@wdio/browserstack-service": "^5.3.4",
     "@wdio/cli": "^5.3.5",
     "@wdio/dot-reporter": "^5.2.3",
@@ -44,7 +45,8 @@
     "badges.e2e.serve": "http-server packages -s",
     "DOC": "",
     "storybook": "start-storybook -p 6006 -s packages/nova/www/build,packages/nutri-score/www/build",
-    "build-storybook": "build-storybook -s packages/nova/www/build,packages/nutri-score/www/build"
+    "build-storybook": "build-storybook -s packages/nova/www/build,packages/nutri-score/www/build",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {}
 }

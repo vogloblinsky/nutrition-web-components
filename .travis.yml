@@ -27,3 +27,5 @@ script:
     - npm run badges.test.e2e.remote
     - echo '2. Generate documentation'
     - npm run build-storybook
+    - echo '3. Deploy documentation'
+    - npm run deploy-storybook -- --ci --source-branch=develop
