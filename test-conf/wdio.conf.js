@@ -46,7 +46,7 @@ exports.config = {
             browser_version: '11.0',
             'browserstack.local': true,
             project: PROJECT_NAME,
-            'browserstack.ie.compatibility': '11001'
+            'browserstack.ie.compatibility': '11000'
         }
     ],
     maxInstances: 5,
