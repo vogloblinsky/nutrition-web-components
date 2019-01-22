@@ -1,7 +1,7 @@
 # Nutrition Web Components
 
 <p align="center">
-  <img src="https://badges.herokuapp.com/browsers?firefox=64&googlechrome=71&safari=12&microsoftedge=17"/>
+  <img src="https://badges.herokuapp.com/browsers?firefox=64&googlechrome=71&safari=12&microsoftedge=17&iexplore=11"/>
 </p>
 
 <p align="center">
@@ -21,17 +21,15 @@
 
 ## Demos
 
-TODO
+[Online demo](http://vogloblinsky.github.io/nutrition-web-components)
 
 ## Quick start
 
-TODO
+[Nova](https://github.com/vogloblinsky/nutrition-web-components/tree/develop/packages/nova)
 
-## Contributing guide
+[Nutri-score](https://github.com/vogloblinsky/nutrition-web-components/tree/develop/packages/nutri-score)
 
-TODO
-
-### Developing Components
+## Developing Components
 
 Components are written in [Typescript](https://typescriptlang.org) with [Stencil](https://stenciljs.com/), and compiled to [Javascript Modules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/).
 
