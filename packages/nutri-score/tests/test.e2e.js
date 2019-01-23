@@ -7,11 +7,15 @@ describe('Nutri-score badge page', () => {
         scoreElement,
         browserName = browser.capabilities.browserName;
 
+    const canShadowDom = browser.execute(() => {
+        return document.head.createShadowRoot || document.head.attachShadow;
+    });
+
     before(function() {
         browser.url('http://localhost:8080/nutri-score/www/');
         nutriScoreBadge = $('nutri-score');
 
-        if (browserName === 'MicrosoftEdge' || browserName === 'internet explorer') {
+        if (!canShadowDom) {
             // If no shadow-DOM
             scoreElement = $('nutri-score .score');
         } else {
@@ -44,18 +48,25 @@ describe('Nutri-score badge page', () => {
     if (browserName !== 'internet explorer') {
         it('should have the nutri-score badge score to B after score attribute updated', () => {
             browser.execute(() => {
-                document.querySelector('nutri-score').setAttribute('score', 'B');
+                document
+                    .querySelector('nutri-score')
+                    .setAttribute('score', 'B');
             });
             browser.pause(WAIT_TIME_EDGE);
             assert.equal(scoreElement.getText(), 'B');
         });
         it('should have the nutri-score badge score correct CSS class', () => {
-            assert.notEqual(scoreElement.getAttribute('class').indexOf('b'), -1);
+            assert.notEqual(
+                scoreElement.getAttribute('class').indexOf('b'),
+                -1
+            );
         });
 
         it('should have the nutri-score badge score to A if updated score > D', () => {
             browser.execute(() => {
-                document.querySelector('nutri-score').setAttribute('score', 'F');
+                document
+                    .querySelector('nutri-score')
+                    .setAttribute('score', 'F');
             });
             browser.pause(WAIT_TIME_EDGE);
             assert.equal(scoreElement.getText(), 'A');
