@@ -23,8 +23,8 @@
   },
   "scripts": {
     "DEV": "",
-    "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve",
-    "nova.dev": "cd packages/nova && stencil build --dev --watch --serve",
+    "nutri-score.dev": "cd packages/nutri-score && stencil build --dev --watch --serve --config stencil.config.dev.ts",
+    "nova.dev": "cd packages/nova && stencil build --dev --watch --serve --config stencil.config.dev.ts",
     "BUILD": "",
     "nutri-score.build": "cd packages/nutri-score && stencil build --build",
     "nutri-score.build:prod": "cd packages/nutri-score && stencil build --build --prod",
