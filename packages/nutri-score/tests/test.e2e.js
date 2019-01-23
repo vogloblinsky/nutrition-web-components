@@ -8,7 +8,7 @@ describe('Nutri-score badge page', () => {
         browserName = browser.capabilities.browserName;
 
     const canShadowDom = browser.execute(() => {
-        return document.head.createShadowRoot || document.head.attachShadow;
+        return !!HTMLElement.prototype.attachShadow;
     });
 
     before(function() {
