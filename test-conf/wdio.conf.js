@@ -42,6 +42,14 @@ exports.config = {
         {
             os: 'Windows',
             os_version: '10',
+            browser: 'Edge',
+            browser_version: '18.0',
+            'browserstack.local': true,
+            project: PROJECT_NAME
+        },
+        {
+            os: 'Windows',
+            os_version: '10',
             browser: 'IE',
             browser_version: '11.0',
             'browserstack.local': true,
