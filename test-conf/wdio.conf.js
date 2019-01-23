@@ -12,7 +12,15 @@ exports.config = {
             os: 'Windows',
             os_version: '10',
             browser: 'Chrome',
-            browser_version: '71.0',
+            browser_version: '72.0',
+            'browserstack.local': true,
+            project: PROJECT_NAME
+        },
+        {
+            os: 'Windows',
+            os_version: '10',
+            browser: 'Chrome',
+            browser_version: '52.0', // Last version before custom element enabled
             'browserstack.local': true,
             project: PROJECT_NAME
         },
@@ -53,14 +61,6 @@ exports.config = {
             os_version: 'Sierra',
             browser: 'Safari',
             browser_version: '10.1',
-            'browserstack.local': true,
-            project: PROJECT_NAME
-        },
-        {
-            os: 'OS X',
-            os_version: 'Mojave',
-            browser: 'Opera',
-            browser_version: '12.15',
             'browserstack.local': true,
             project: PROJECT_NAME
         },
