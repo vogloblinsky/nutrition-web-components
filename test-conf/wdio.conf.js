@@ -7,14 +7,15 @@ exports.config = {
     services: ['browserstack'],
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
-    capabilities: [{
+    capabilities: [
+        {
             os: 'Windows',
             os_version: '10',
             browser: 'Chrome',
             browser_version: '72.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        }
+        },
         /*,
                 {
                     os: 'Windows',
@@ -24,7 +25,6 @@ exports.config = {
                     'browserstack.local': true,
                     project: PROJECT_NAME
                 }*/
-        ,
         {
             os: 'Windows',
             os_version: '10',
@@ -48,7 +48,7 @@ exports.config = {
             browser_version: '12.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        }
+        },
         /*,
                 {
                     os: 'OS X',
@@ -66,7 +66,6 @@ exports.config = {
                     'browserstack.local': true,
                     project: PROJECT_NAME
                 }*/
-        ,
         {
             os: 'Windows',
             os_version: '10',
@@ -94,7 +93,7 @@ exports.config = {
                 }*/
     ],
     maxInstances: 5,
-    logLevel: 'info',
+    logLevel: 'warn',
     specs: ['./packages/nova/tests/*.js', './packages/nutri-score/tests/*.js'],
     deprecationWarnings: true,
     bail: 0,
@@ -112,7 +111,8 @@ exports.config = {
         console.log('Connecting local');
         return new Promise(function(resolve, reject) {
             exports.bs_local = new browserstack.Local();
-            exports.bs_local.start({
+            exports.bs_local.start(
+                {
                     key: exports.config.key
                 },
                 function(error) {
