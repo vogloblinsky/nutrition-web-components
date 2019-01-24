@@ -7,23 +7,24 @@ exports.config = {
     services: ['browserstack'],
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
-    capabilities: [
-        {
+    capabilities: [{
             os: 'Windows',
             os_version: '10',
             browser: 'Chrome',
             browser_version: '72.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        },
-        {
-            os: 'Windows',
-            os_version: '10',
-            browser: 'Chrome',
-            browser_version: '52.0', // Last version before custom element enabled
-            'browserstack.local': true,
-            project: PROJECT_NAME
-        },
+        }
+        /*,
+                {
+                    os: 'Windows',
+                    os_version: '10',
+                    browser: 'Chrome',
+                    browser_version: '52.0', // Last version before custom element enabled
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                }*/
+        ,
         {
             os: 'Windows',
             os_version: '10',
@@ -47,23 +48,25 @@ exports.config = {
             browser_version: '12.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        },
-        {
-            os: 'OS X',
-            os_version: 'High Sierra',
-            browser: 'Safari',
-            browser_version: '11.0',
-            'browserstack.local': true,
-            project: PROJECT_NAME
-        },
-        {
-            os: 'OS X',
-            os_version: 'Sierra',
-            browser: 'Safari',
-            browser_version: '10.1',
-            'browserstack.local': true,
-            project: PROJECT_NAME
-        },
+        }
+        /*,
+                {
+                    os: 'OS X',
+                    os_version: 'High Sierra',
+                    browser: 'Safari',
+                    browser_version: '11.0',
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                },
+                {
+                    os: 'OS X',
+                    os_version: 'Sierra',
+                    browser: 'Safari',
+                    browser_version: '10.1',
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                }*/
+        ,
         {
             os: 'Windows',
             os_version: '10',
@@ -79,15 +82,16 @@ exports.config = {
             browser_version: '17.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        },
-        {
-            os: 'Windows',
-            os_version: '10',
-            browser: 'IE',
-            browser_version: '11.0',
-            'browserstack.local': true,
-            project: PROJECT_NAME
         }
+        /*,
+                {
+                    os: 'Windows',
+                    os_version: '10',
+                    browser: 'IE',
+                    browser_version: '11.0',
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                }*/
     ],
     maxInstances: 5,
     logLevel: 'info',
@@ -108,8 +112,7 @@ exports.config = {
         console.log('Connecting local');
         return new Promise(function(resolve, reject) {
             exports.bs_local = new browserstack.Local();
-            exports.bs_local.start(
-                {
+            exports.bs_local.start({
                     key: exports.config.key
                 },
                 function(error) {
