@@ -13,7 +13,10 @@ describe('Nova badge page', () => {
         browser.url('http://localhost:8080/nova/www/');
 
         canShadowDom = browser.execute(() => {
-            return !!window.customElements;
+            return !!(
+                document.createElement('div').attachShadow ||
+                document.createElement('div').createShadowRoot
+            );
         });
 
         novaBadge = $('nova-badge');

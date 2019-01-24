@@ -13,7 +13,10 @@ describe('Nutri-score badge page', () => {
         browser.url('http://localhost:8080/nutri-score/www/');
 
         canShadowDom = browser.execute(() => {
-            return !!window.customElements;
+            return !!(
+                document.createElement('div').attachShadow ||
+                document.createElement('div').createShadowRoot
+            );
         });
 
         nutriScoreBadge = $('nutri-score');
