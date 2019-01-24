@@ -7,12 +7,15 @@ describe('Nutri-score badge page', () => {
         scoreElement,
         browserName = browser.capabilities.browserName;
 
-    const canShadowDom = browser.execute(() => {
-        return !!HTMLElement.prototype.attachShadow;
-    });
+    let canShadowDom = null;
 
     before(function() {
         browser.url('http://localhost:8080/nutri-score/www/');
+        
+        canShadowDom = browser.execute(() => {
+            return !!HTMLElement.prototype.attachShadow;
+        });
+        
         nutriScoreBadge = $('nutri-score');
 
         if (!canShadowDom) {

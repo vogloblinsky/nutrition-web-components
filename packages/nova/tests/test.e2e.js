@@ -7,12 +7,15 @@ describe('Nova badge page', () => {
         scoreElement,
         browserName = browser.capabilities.browserName;
 
-    const canShadowDom = browser.execute(() => {
-        return !!HTMLElement.prototype.attachShadow;
-    });
+    let canShadowDom = null;
 
-    before(function() {
+    before(() => {
         browser.url('http://localhost:8080/nova/www/');
+
+        canShadowDom = browser.execute(() => {
+            return !!HTMLElement.prototype.attachShadow;
+        });
+
         novaBadge = $('nova-badge');
 
         if (!canShadowDom) {
