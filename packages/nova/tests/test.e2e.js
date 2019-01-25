@@ -25,14 +25,14 @@ describe('Nova badge page', () => {
 
         novaBadge = $('nova-badge');
 
-        /*if (!canShadowDom) {
+        if (!canShadowDom) {
             // If no shadow-DOM
             scoreElement = $('nova-badge .score');
         } else {
             scoreElement = novaBadge.$(function() {
                 return this.shadowRoot.querySelector('.score');
             });
-        }*/
+        }
     });
 
     it('should have the right title', () => {
