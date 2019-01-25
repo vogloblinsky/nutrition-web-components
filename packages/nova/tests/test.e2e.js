@@ -19,16 +19,20 @@ describe('Nova badge page', () => {
             );
         });
 
+        console.log('');
+        console.log('canShadowDom: ', canShadowDom);
+        console.log('');
+
         novaBadge = $('nova-badge');
 
-        if (!canShadowDom) {
+        /*if (!canShadowDom) {
             // If no shadow-DOM
             scoreElement = $('nova-badge .score');
         } else {
             scoreElement = novaBadge.$(function() {
                 return this.shadowRoot.querySelector('.score');
             });
-        }
+        }*/
     });
 
     it('should have the right title', () => {
@@ -36,7 +40,7 @@ describe('Nova badge page', () => {
         assert.equal(title, 'Nutrition Web Component - Nova badge');
     });
 
-    it('should have the nova badge element hydrated', () => {
+    /*it('should have the nova badge element hydrated', () => {
         const CSSClass = novaBadge.getAttribute('class');
         assert.notEqual(CSSClass.indexOf('hydrated'), -1);
     });
@@ -48,9 +52,7 @@ describe('Nova badge page', () => {
         assert.notEqual(scoreElement.getAttribute('class').indexOf('one'), -1);
     });
 
-    /**
-     * Disable these tests for IE11, breaks for .querySelector, WIP
-     */
+    // Disable these tests for IE11, breaks for .querySelector, WIP
     if (browserName !== 'internet explorer') {
         it('should have the nova badge score to 2 after score attribute updated', () => {
             browser.execute(() => {
@@ -73,5 +75,5 @@ describe('Nova badge page', () => {
             browser.pause(WAIT_TIME_EDGE);
             assert.equal(scoreElement.getText(), 1);
         });
-    }
+    }*/
 });
