@@ -25,6 +25,16 @@ export class Nova {
         }
     }
 
+    isValidScore(score) {
+        return score === '1' || score === '2' || score === '3' || score === '4';
+    }
+
+    componentWillLoad() {
+        if (!this.isValidScore(this.score)) {
+            this.score = '1';
+        }
+    }
+
     /**
      * Transform score to CSS class
      */
