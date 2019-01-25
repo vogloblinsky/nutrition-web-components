@@ -7,15 +7,14 @@ exports.config = {
     services: ['browserstack'],
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
-    capabilities: [
-        /*{
-                    os: 'Windows',
-                    os_version: '10',
-                    browser: 'Chrome',
-                    browser_version: '72.0 beta',
-                    'browserstack.local': true,
-                    project: PROJECT_NAME
-                },*/
+    capabilities: [{
+            os: 'Windows',
+            os_version: '10',
+            browser: 'Chrome',
+            browser_version: '72.0 beta',
+            'browserstack.local': true,
+            project: PROJECT_NAME
+        },
         /*,
                 {
                     os: 'Windows',
@@ -25,38 +24,39 @@ exports.config = {
                     'browserstack.local': true,
                     project: PROJECT_NAME
                 }*/
-        /*{
+        {
             os: 'Windows',
             os_version: '10',
             browser: 'Firefox',
             browser_version: '64.0', // Last version
             'browserstack.local': true,
             project: PROJECT_NAME
-        },
-        {
-            os: 'Windows',
-            os_version: '10',
-            browser: 'Firefox',
-            browser_version: '62.0', // Last version before custom element enabled by default
-            'browserstack.local': true,
-            project: PROJECT_NAME
-        },
-        {
-            os: 'OS X',
-            os_version: 'Mojave',
-            browser: 'Safari',
-            browser_version: '12.0',
-            'browserstack.local': true,
-            project: PROJECT_NAME
-        },*/
-        {
+        }
+        /*,
+                {
+                    os: 'Windows',
+                    os_version: '10',
+                    browser: 'Firefox',
+                    browser_version: '62.0', // Last version before custom element enabled by default
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                },
+                {
+                    os: 'OS X',
+                    os_version: 'Mojave',
+                    browser: 'Safari',
+                    browser_version: '12.0',
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                },*/
+        /*{
             os: 'OS X',
             os_version: 'High Sierra',
             browser: 'Safari',
             browser_version: '11.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        },
+        },*/
         /*,
                         {
                             os: 'OS X',
