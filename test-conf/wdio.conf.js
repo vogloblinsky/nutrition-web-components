@@ -7,12 +7,11 @@ exports.config = {
     services: ['browserstack'],
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
-    capabilities: [
-        {
+    capabilities: [{
             os: 'Windows',
             os_version: '10',
             browser: 'Chrome',
-            browser_version: '72.0',
+            browser_version: '72.0 beta',
             'browserstack.local': true,
             project: PROJECT_NAME
         },
@@ -111,8 +110,7 @@ exports.config = {
         console.log('Connecting local');
         return new Promise(function(resolve, reject) {
             exports.bs_local = new browserstack.Local();
-            exports.bs_local.start(
-                {
+            exports.bs_local.start({
                     key: exports.config.key
                 },
                 function(error) {
