@@ -28,7 +28,7 @@ exports.config = {
             os: 'Windows',
             os_version: '10',
             browser: 'Firefox',
-            browser_version: '65.0 beta', // Last version
+            browser_version: '64.0', // Last version
             'browserstack.local': true,
             project: PROJECT_NAME
         },
