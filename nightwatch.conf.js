@@ -1,4 +1,6 @@
-{
+const seleniumServer = require('selenium-server');
+
+module.exports = {
     "src_folders": ["tests-nw"],
     "output_folder": "nw/reports",
     "test_workers": {
@@ -7,7 +9,7 @@
     },
     "selenium": {
         "start_process": true,
-        "server_path": "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.141.5.jar",
+        "server_path": seleniumServer.path,
         "log_path": "nw",
         "host": "127.0.0.1",
         "port": 4444,
@@ -19,7 +21,7 @@
     "test_settings": {
         "default": {
             "desiredCapabilities": {
-                "browserName": "chrome"
+                "browserName": "safari"
             }
         }
     }
