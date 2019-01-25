@@ -92,7 +92,7 @@ exports.config = {
                 }*/
     ],
     maxInstances: 5,
-    logLevel: 'warn',
+    logLevel: 'trace',
     specs: ['./packages/nova/tests/*.js', './packages/nutri-score/tests/*.js'],
     deprecationWarnings: true,
     bail: 0,
