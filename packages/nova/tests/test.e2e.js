@@ -40,7 +40,7 @@ describe('Nova badge page', () => {
         assert.equal(title, 'Nutrition Web Component - Nova badge');
     });
 
-    /*it('should have the nova badge element hydrated', () => {
+    it('should have the nova badge element hydrated', () => {
         const CSSClass = novaBadge.getAttribute('class');
         assert.notEqual(CSSClass.indexOf('hydrated'), -1);
     });
@@ -48,7 +48,7 @@ describe('Nova badge page', () => {
     it('should have the nova badge score to 1', () => {
         assert.equal(scoreElement.getText(), 1);
     });
-    it('should have the nova badge score correct CSS class', () => {
+    /*it('should have the nova badge score correct CSS class', () => {
         assert.notEqual(scoreElement.getAttribute('class').indexOf('one'), -1);
     });
 

@@ -7,14 +7,15 @@ exports.config = {
     services: ['browserstack'],
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
-    capabilities: [{
-            os: 'Windows',
-            os_version: '10',
-            browser: 'Chrome',
-            browser_version: '72.0 beta',
-            'browserstack.local': true,
-            project: PROJECT_NAME
-        },
+    capabilities: [
+        /*{
+                    os: 'Windows',
+                    os_version: '10',
+                    browser: 'Chrome',
+                    browser_version: '72.0 beta',
+                    'browserstack.local': true,
+                    project: PROJECT_NAME
+                },*/
         /*,
                 {
                     os: 'Windows',
@@ -24,7 +25,7 @@ exports.config = {
                     'browserstack.local': true,
                     project: PROJECT_NAME
                 }*/
-        {
+        /*{
             os: 'Windows',
             os_version: '10',
             browser: 'Firefox',
@@ -47,7 +48,7 @@ exports.config = {
             browser_version: '12.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        },
+        },*/
         {
             os: 'OS X',
             os_version: 'High Sierra',
@@ -65,7 +66,7 @@ exports.config = {
                             'browserstack.local': true,
                             project: PROJECT_NAME
                         }*/
-        {
+        /*{
             os: 'Windows',
             os_version: '10',
             browser: 'Edge',
@@ -80,7 +81,7 @@ exports.config = {
             browser_version: '17.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        }
+        }*/
         /*,
                 {
                     os: 'Windows',
