@@ -47,7 +47,7 @@ exports.config = {
             browser_version: '12.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        }, ,
+        },
         {
             os: 'OS X',
             os_version: 'High Sierra',
@@ -55,7 +55,7 @@ exports.config = {
             browser_version: '11.0',
             'browserstack.local': true,
             project: PROJECT_NAME
-        }
+        },
         /*,
                         {
                             os: 'OS X',
