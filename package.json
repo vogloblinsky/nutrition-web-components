@@ -27,7 +27,7 @@
     "TEST-LOCAL": "",
     "test": "karma start karma.conf.js",
     "TEST-REMOTE": "",
-    "test.e2e.remote": "karma start karma.es5.bs.conf.js",
+    "test.e2e.remote": "karma start karma.es5.bs.config.js",
     "SERVE": "",
     "badges.e2e.serve": "http-server packages -s",
     "DOC": "",
