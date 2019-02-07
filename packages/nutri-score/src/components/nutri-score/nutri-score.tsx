@@ -26,6 +26,16 @@ export class NutriScore {
         }
     }
 
+    isValidScore(score) {
+        return score === 'A' || score === 'B' || score === 'C' || score === 'D' || score === 'E';
+    }
+
+    componentWillLoad() {
+        if (!this.isValidScore(this.score)) {
+            this.score = 'A';
+        }
+    }
+
     render() {
         return (
             <div class="container">
