@@ -62,4 +62,13 @@ describe('<nutri-score>', () => {
 
         assert.equal(scoreElement.textContent, 'A');
     });
+
+    it('should support vertical mode', async () => {
+        const el = await fixture('<nutri-score score="F" vertical></nutri-score>');
+        await el.componentOnReady();
+
+        const containerElement = el.shadowRoot.querySelector('.container');
+
+        assert.notEqual(containerElement.getAttribute('class').indexOf('vertical'), -1);
+    });
 });

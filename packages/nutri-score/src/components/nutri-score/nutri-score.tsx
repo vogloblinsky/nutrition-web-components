@@ -11,6 +11,11 @@ export class NutriScore {
      */
     @Prop({ mutable: true }) score: string;
 
+    /**
+     * The vertical option
+     */
+    @Prop() vertical: boolean = false;
+
     @Watch('score')
     validateScore() {
         if (
@@ -27,7 +32,13 @@ export class NutriScore {
     }
 
     isValidScore(score) {
-        return score === 'A' || score === 'B' || score === 'C' || score === 'D' || score === 'E';
+        return (
+            score === 'A' ||
+            score === 'B' ||
+            score === 'C' ||
+            score === 'D' ||
+            score === 'E'
+        );
     }
 
     componentWillLoad() {
@@ -38,7 +49,7 @@ export class NutriScore {
 
     render() {
         return (
-            <div class="container">
+            <div class={'container ' + (this.vertical ? 'vertical' : '')}>
                 <div class="title">NUTRI-SCORE</div>
                 <div class="scores-container">
                     <div class="scores">

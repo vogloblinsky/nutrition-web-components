@@ -17,12 +17,20 @@ export namespace Components {
     * The score
     */
     'score': string;
+    /**
+    * The vertical option
+    */
+    'vertical': boolean;
   }
   interface NutriScoreAttributes extends StencilHTMLAttributes {
     /**
     * The score
     */
     'score'?: string;
+    /**
+    * The vertical option
+    */
+    'vertical'?: boolean;
   }
 }
 
