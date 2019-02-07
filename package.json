@@ -7,12 +7,12 @@
     "@open-wc/testing": "^0.9.15",
     "@open-wc/testing-karma": "^0.4.9",
     "@open-wc/testing-karma-bs": "^0.2.9",
-    "@stencil/core": "^0.17.1",
+    "@stencil/core": "^0.17.2",
     "@stencil/sass": "^0.1.1",
     "@storybook/addon-knobs": "^4.1.11",
     "@storybook/html": "^4.1.11",
     "karma": "^4.0.0",
-    "lit-html": "^1.0.0-rc.2",
+    "lit-html": "^1.0.0",
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
