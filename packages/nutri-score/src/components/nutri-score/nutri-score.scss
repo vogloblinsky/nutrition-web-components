@@ -17,7 +17,6 @@ $eColor: #e63c07;
         width: 220px;
         height: 120px;
 
-
         .title {
             color: #7e7e7e;
             font-size: 20px;
@@ -106,6 +105,80 @@ $eColor: #e63c07;
             &.e {
                 background-color: $eColor;
                 left: 163px;
+            }
+        }
+    }
+}
+
+:host([vertical]) {
+    .container {
+        flex-direction: row;
+        width: 120px;
+        height: 220px;
+
+        .title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            width: 25px;
+            margin: 10px;
+            margin-left: 10px;
+            margin-right: 2px;
+            text-align: right;
+        }
+
+        .scores-container {
+            width: 72px;
+            height: 210px;
+            top: 5px;
+
+            .scores {
+                flex-direction: column;
+
+                .a {
+                    border-radius: 20px 20px 0 0;
+                }
+
+                .b {
+                    background-color: $bColor;
+                }
+
+                .c {
+                    background-color: $cColor;
+                }
+
+                .d {
+                    background-color: $dColor;
+                }
+
+                .e {
+                    background-color: $eColor;
+                    border-radius: 0 0 20px 20px;
+                }
+            }
+        }
+
+        .score {
+            width: 85px;
+            height: 46px;
+
+            top: -5px;
+            left: -10px;
+
+            &.b {
+                top: 36px;
+            }
+
+            &.c {
+                top: 78px;
+            }
+
+            &.d {
+                top: 121px;
+            }
+
+            &.e {
+                top: 163px;
             }
         }
     }

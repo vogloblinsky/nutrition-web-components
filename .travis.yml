@@ -21,10 +21,11 @@ addons:
         access_key:
             secure: WrPHo6phISBwFv1DbhH1bh7M27mBECE8685JaoScjNWXml8qV8Xg6R2mGpzP0ZyJk4P7HL70HCyCe7EbLxKrrKtVD6A1Uk/7q1gP9/pdJYtgaRXpbSyAN9r9/lwn9pKR0aZqFViq3DPdrWD++gaU/xOOjOYAtPZv7150TiJ+/IlbMus4NwVKMnRCK27feU4KIHIH+6+JhOLq/Tq7NR1StX/cL2wkimgQM17AIKs4bw7Bq/pjYonut9F85o4YGsy116t8h2m+n/xHXa/QS4YJXyyd7t0YoJtBgEnv79FzzgWR33D3OGBQ+0wyfCL/vc7bFCSKdO2Nb6befaUxX+XMK488ElagGTNmL8wXizSoj+qvSwO6jLtf99LsJo1zL4jJyScij5LcbZkbmFSVBuY2C2p7KkVJRCqALvqv8Cv5ecw+UHtvoBkGhBt6WPNJdK2C1Jk6MV69IGUmD3KKESJWgox+JDc+iqyV6XLS4L9UpPutWRQytyk74ydlOUSxUJ0AEPMY6CGzsXgmgJCx+iyoyLC+SrKd84Bu/0zL3Lcq87ZHcGEIxJBseC86Gtgsz8PQrB5rzlumkLnfP7a5n5HUkB9XjwusRsiOnFqm6WGsd7UooinJ9CXlr+sXAmWHvrVLr0iilSJ6kkOcWDBQRRAHGhSuoVOnyI44sM0KA7uo5DI=
 script:
-    - echo '0. Global test'
-    - npm run test
-    - echo '1. Browserstack tests'
-    - npm run badges.test.e2e.remote
+    - echo 'Build'
+    - npm run nova.build
+    - npm run nutri-score.build
+    - echo 'Browserstack tests'
+    - npm run test.e2e.remote
     - echo '2. Generate documentation'
     - npm run build-storybook
     - echo '3. Deploy documentation'

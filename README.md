@@ -39,13 +39,10 @@ The output Javascript Modules can be used in every modern browser directly, and 
 
 We officially support the last two versions of every major browser. Specifically, we test on the following browsers:
 
--   Chrome 60+
+-   Chrome 71+
 -   Safari 10.1+
 -   Firefox 63+
--   IE 11 / Edge 16+
--   Opera
--   Mobile Safari
--   Chrome on Android
+-   IE 11 / Edge 17+
 
 ## References
 
