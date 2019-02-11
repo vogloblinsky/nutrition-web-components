@@ -12,6 +12,7 @@
     ],
     "author": "Vincent Ogloblinsky",
     "license": "MIT",
+    "homepage": "https://github.com/vogloblinsky/nutrition-web-components/tree/develop/packages/nutri-score#readme",
     "repository": {
         "type": "git",
         "url": "https://github.com/vogloblinsky/nutrition-web-components.git"
