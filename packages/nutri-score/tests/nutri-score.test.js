@@ -13,14 +13,12 @@ defineCustomElements(window);
 describe('<nutri-score>', () => {
     it('Rendered by Stencil', async () => {
         const el = await fixture('<nutri-score></nutri-score>');
-        await el.componentOnReady();
 
         expect(el.getAttribute('class')).to.equal('hydrated');
     });
 
     it('should have the nutri-score badge score to A', async () => {
         const el = await fixture('<nutri-score></nutri-score>');
-        await el.componentOnReady();
 
         const scoreElement = el.shadowRoot.querySelector('.score');
         assert.equal(scoreElement.textContent, 'A');
@@ -28,7 +26,6 @@ describe('<nutri-score>', () => {
 
     it('should have the nutri-score badge score correct CSS class', async () => {
         const el = await fixture('<nutri-score></nutri-score>');
-        await el.componentOnReady();
 
         const scoreElement = el.shadowRoot.querySelector('.score');
         assert.notEqual(scoreElement.getAttribute('class').indexOf('a'), -1);
@@ -44,7 +41,7 @@ describe('<nutri-score>', () => {
 
     it('should have the nutri-score badge score to B after score attribute updated', async () => {
         const el = await fixture('<nutri-score></nutri-score>');
-        await el.componentOnReady();
+
         el.setAttribute('score', 'B');
         await aTimeout(1500);
 
@@ -56,7 +53,6 @@ describe('<nutri-score>', () => {
 
     it('should have the nutri-score badge score to A if updated score > E', async () => {
         const el = await fixture('<nutri-score score="F"></nutri-score>');
-        await el.componentOnReady();
 
         const scoreElement = el.shadowRoot.querySelector('.score');
 
@@ -65,7 +61,6 @@ describe('<nutri-score>', () => {
 
     it('should support vertical mode', async () => {
         const el = await fixture('<nutri-score score="F" vertical></nutri-score>');
-        await el.componentOnReady();
 
         const containerElement = el.shadowRoot.querySelector('.container');
 
