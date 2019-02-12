@@ -58,4 +58,28 @@ describe('<nova-badge>', () => {
 
         assert.equal(scoreElement.textContent, '1');
     });
+
+    it('should render others values - 2', async () => {
+        const el = await fixture('<nova-badge score="2"></nova-badge>');
+
+        const scoreElement = el.shadowRoot.querySelector('.score');
+
+        assert.equal(scoreElement.textContent, '2');
+    });
+
+    it('should render others values - 3', async () => {
+        const el = await fixture('<nova-badge score="3"></nova-badge>');
+
+        const scoreElement = el.shadowRoot.querySelector('.score');
+
+        assert.equal(scoreElement.textContent, '3');
+    });
+
+    it('should render others values - 4', async () => {
+        const el = await fixture('<nova-badge score="4"></nova-badge>');
+
+        const scoreElement = el.shadowRoot.querySelector('.score');
+
+        assert.equal(scoreElement.textContent, '4');
+    });
 });
