@@ -7,15 +7,28 @@ module.exports = config => {
     merge(defaultSettings(config), {
       files: [
         // allows running single tests with the --grep flag
-        config.grep ? config.grep : 'packages/**/*.test.js',
+        config.grep ? config.grep : 'packages/**/*.test.js'
       ],
-
-      // your custom config
-    }),
+      coverageIstanbulReporter: {
+        thresholds: {
+          global: {
+            statements: 60,
+            branches: 60,
+            functions: 60,
+            lines: 60
+          }
+        }
+      }
+    })
   );
   config.client = {
     captureConsole: true
   };
-  config.reporters = ['mocha'];
+  config.webpack.module.rules[0].exclude = [
+    /\.core\.js/,
+    /\.test\.js/,
+    /\.define\.js/,
+    /\.components\.js/
+  ];
   return config;
 };
