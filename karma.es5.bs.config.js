@@ -46,5 +46,6 @@ module.exports = config => {
     'bs_win_chrome_52',
     'bs_win_firefox_62'
   ];
+  config.reporters = ['mocha', 'coverage-istanbul', 'coveralls'];
   return config;
 };
