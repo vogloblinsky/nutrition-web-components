@@ -1,7 +1,7 @@
 # Nutrition Web Components
 
 <p align="center">
-  <img src="https://badges.herokuapp.com/browsers?firefox=64&googlechrome=71&safari=12&microsoftedge=17&iexplore=11"/>
+  <img src="https://badges.herokuapp.com/browsers?firefox=64,62&googlechrome=72,52&safari=12,10.1,11.1&microsoftedge=18&iexplore=11"/>
 </p>
 
 <p align="center">
