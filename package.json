@@ -28,7 +28,7 @@
     "TEST-LOCAL": "",
     "test": "karma start karma.conf.js",
     "TEST-REMOTE": "",
-    "test.e2e.remote": "karma start karma.es5.bs.config.js --legacy",
+    "test.e2e.remote": "karma start karma.bs.config.js --legacy --coverage",
     "SERVE": "",
     "badges.e2e.serve": "http-server packages -s",
     "DOC": "",
