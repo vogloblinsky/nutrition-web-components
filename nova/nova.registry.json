@@ -1,0 +1,15 @@
+{
+  "namespace": "nova",
+  "fsNamespace": "nova",
+  "loader": "../nova.js",
+  "core": "nova.mculldio.js",
+  "corePolyfilled": "nova.cjl6xyct.js",
+  "components": {
+    "nova-badge": {
+      "bundleIds": {
+        "$": "nsrgswbr"
+      },
+      "encapsulation": "shadow"
+    }
+  }
+}

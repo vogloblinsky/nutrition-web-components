@@ -1,0 +1,15 @@
+{
+  "namespace": "NutriScore",
+  "fsNamespace": "nutri-score",
+  "loader": "../nutri-score.js",
+  "core": "nutri-score.2cuugecv.js",
+  "corePolyfilled": "nutri-score.nyopgqoa.js",
+  "components": {
+    "nutri-score": {
+      "bundleIds": {
+        "$": "lwoquovh"
+      },
+      "encapsulation": "shadow"
+    }
+  }
+}
